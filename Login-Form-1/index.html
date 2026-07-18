@@ -1,0 +1,119 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/97ebdf5864.js" crossorigin="anonymous"></script>
+    <title>Login Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            width: 100vw;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            background: url(./Assets/background/background.jpg) no-repeat center center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            width: 400px;
+            height: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background: transparent;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 25px;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+            
+        }
+        h2 {
+            color: #fff;
+            text-transform: uppercase;
+            padding: 20px 0;
+            font-size: 2em;
+        }
+        .form-group {
+            position: relative;
+            margin: 30px 0;
+            width: 330px;
+            border-bottom: 3px solid #fff;
+        }
+        .form-group input {
+            width: 100%;
+            height: 50px;
+            background: transparent;
+            border: none;
+            outline: none;
+            font-size: 1.2em;
+            color: #fff;
+            padding: 0 30px 0 10px;
+        }
+        .form-group label {
+            position: absolute;
+            top: 50%;
+            left: 10px;
+            transform: translateY(-50%);
+            font-size: 1.2em;
+            color: #fff;
+            transition: 0.5s;
+        }
+        input:focus ~label,
+        input:valid ~label{
+            top: -5px;
+        }
+        .form-group i {
+            position: absolute;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+            font-size: 1.2em;
+            color: #fff
+        }
+        #btn {
+            width: 100%;
+            height: 50px;
+            border-radius: 25px;
+            border: none;
+            outline: none;
+            font-size: 1.5em;
+            text-transform: uppercase;
+            font-weight: 600;
+            margin: 10px 0;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+        #btn:hover {
+            background: rgba(0, 0, 0, 0.3);
+            color: #fff;
+        }
+    </style>
+ </head>
+ <body>
+    <div class="container">
+        <h2>
+            Login
+        </h2>
+        <form action="">
+            <div class="form-group">
+                <input type="email" id="email" name="email" required>
+                <label for="email">Email</label>
+                <i class="fa-solid fa-envelope-circle-check"></i>
+            </div>
+            <div class="form-group">
+                <input type="password" id="password" name="password" required>
+                <label for="password">Password:</label>
+                <i class="fa-solid fa-user-lock"></i>
+            </div>
+            <button type="submit" id="btn">Login</button>
+        </form>
+    </div>
+ </body>
+ </html>
